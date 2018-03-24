@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css';
+import '../navbar/Navbar.css';
 
 class Navbar extends Component {
     render(){
@@ -10,15 +10,16 @@ class Navbar extends Component {
                 <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="container">
+                <span className="navbar-brand mb-0 h1">React Website</span>
                 <ul className="navbar-nav ml-auto">
-                    <li className="nav-item active">
-                    <link className="nav-link" href="/">Home <span className="sr-only">(current)</span></link>
+                    <li className="nav-item">
+                    <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
                     </li>
                     <li className="nav-item">
-                    <link className="nav-link" href="#">Features</link>
+                    <Link className="nav-link" to="/About">About</Link>
                     </li>
                     <li className="nav-item">
-                    <link className="nav-link" href="#">Pricing</link>
+                    <Link className="nav-link" to="/Contact">Contact</Link>
                     </li>
                 </ul>
                 </div>
